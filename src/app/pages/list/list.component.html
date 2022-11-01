@@ -1,0 +1,17 @@
+<ul>
+  <li routerLink="/home">Home</li>
+  <li routerLink="/list">Lista</li>
+</ul>
+
+<div class="w-screen h-screen flex items-center justify-center">
+  <div class="bg-slate-500 w-1/2 p-4 text-white rounded-3xl">
+    <ul class="grid gap-y-4">
+      <li class="flex gap-x-4" *ngFor="let message of messages; index as i">
+        {{message.todo}}
+        <button class="bg-green-600 p-4"(click)="handleUpdate(i)" >Editar</button>
+        <button class="bg-green-600 p-4" (click)="handleDelete(i)" >Borrar</button>
+      </li>
+    </ul>
+    <button class="bg-green-600 p-4" routerLink="/contact">Crear</button>
+  </div>
+</div>

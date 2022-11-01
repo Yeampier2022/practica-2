@@ -1,0 +1,15 @@
+<ul>
+  <li routerLink="/home">Home</li>
+  <li routerLink="/list">Lista</li>
+</ul>
+
+<div class="w-screen h-screen flex items-center justify-center">
+  <div class="bg-slate-500 w-1/2 p-4 rounded-3xl">
+    <form class="grid gap-y-4" [formGroup]="form" (submit)="handleSubmit()">
+      <label for=""> To Do: </label>
+      <input type="text" class="form-control" formControlName="todo" />
+
+      <button class="bg-green-600 p-4" type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
